@@ -1,5 +1,8 @@
 {
   "name": "zmusic",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "dbfc8b89"
 }

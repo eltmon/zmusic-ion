@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private iab: InAppBrowser) {
+    //  const browser = this.iab.create('https://ionicframework.com/');
+    var ref = iab.create('https://www.zmusiccafe.com', '_self', 'location=yes');
+
+  }
 
 }
