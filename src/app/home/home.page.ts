@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { BackgroundMode } from '@ionic-native/background-mode/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,10 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 })
 export class HomePage {
 
-  constructor(private iab: InAppBrowser) {
+  constructor(private backgroundMode: BackgroundMode, private iab: InAppBrowser) {
     //  const browser = this.iab.create('https://ionicframework.com/');
     var ref = iab.create('https://www.zmusiccafe.com', '_self', 'location=yes');
-
+    backgroundMode.enable();
   }
 
 }
